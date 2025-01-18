@@ -33,7 +33,7 @@
 
 	<!-- PROJECT REFERENCES -->
 	<ItemGroup>
-		<ProjectReference Include="..\corelib\Fahrenheit.CoreLib.csproj">
+		<ProjectReference Include="..\core\Fahrenheit.Core.csproj">
 			<Private>false</Private>
 			<ExcludeAssets>runtime</ExcludeAssets>
 		</ProjectReference>
