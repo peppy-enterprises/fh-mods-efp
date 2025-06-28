@@ -16,7 +16,7 @@
         <AssemblyTitle>Extensions, Fixes and Patches for Fahrenheit</AssemblyTitle>
         <Product>Extensions, Fixes and Patches for Fahrenheit</Product>
     </PropertyGroup>
-    
+
     <!-- SDK REFERENCES -->
     <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
     <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
@@ -37,8 +37,7 @@
     <ItemGroup>
         <ProjectReference Include="..\..\base\core\Fahrenheit.Core.csproj">
             <Private>false</Private>
-            <!-- Hack due to NuGet's complete inability to properly handle transitive native deps -->
-            <IncludeAssets>compile</IncludeAssets>
+            <ExcludeAssets>runtime;native</ExcludeAssets>
         </ProjectReference>
     </ItemGroup>
 
