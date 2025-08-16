@@ -1,11 +1,8 @@
 global using Fahrenheit.Core;
 
 using System.IO;
-using System.Text.Json.Serialization;
 
-using Fahrenheit.Modules.EFP.Fixes;
-
-namespace Fahrenheit.Modules.EFP;
+namespace Fahrenheit.Mods.EFP;
 
 public class Patches {
     //public static OverdriveCostFix overdrive_cost = new();
@@ -13,14 +10,13 @@ public class Patches {
 }
 
 public class EfpModule : FhModule {
-    public Patches patches;
+    public Patches patches; // TODO: re-evaluate.
 
-    private FhModContext _context;
-    private FileStream _global_state;
+    private FhModContext? _context;
+    private FileStream?   _global_state;
 
     public override bool init(FhModContext context, FileStream global_state) {
-        patches = new();
-
+        patches  = new();
         settings = new FhSettingsCategory("fh.efp", [
             // Choose which category to put your patch in:
             // - Fixes are EfpPatches that fix vanilla bugs, such as commands not properly dealing with arbitrary overdrive costs
@@ -38,7 +34,7 @@ public class EfpModule : FhModule {
             ]),
         ]);
 
-        _context = context;
+        _context      = context;
         _global_state = global_state;
 
         //patches.overdrive_cost.hook();
