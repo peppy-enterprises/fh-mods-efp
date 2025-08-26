@@ -1,7 +1,3 @@
-using System.Collections.Generic;
-
-using Fahrenheit.Core;
-
 namespace Fahrenheit.Modules.EFP;
 
 public abstract class EfpPatch {
