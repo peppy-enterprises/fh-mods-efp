@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+
 namespace Fahrenheit.Modules.EFP;
 
 public abstract class EfpPatch {
