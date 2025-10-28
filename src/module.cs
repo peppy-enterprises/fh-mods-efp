@@ -11,7 +11,7 @@ public class Patches {
     // Add patch here like so: `public static PatchType patch_name = new();`
 }
 
-[FhLoad(FhGameType.FFX)]
+[FhLoad(FhGameId.FFX)]
 public class EfpModule : FhModule {
     public Patches patches; // TODO: re-evaluate.
 
